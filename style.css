@@ -1,0 +1,389 @@
+ :root{
+    --primary:#eee;
+    --light:#fff;
+    --dark:#333;
+    --shadow:0 1px 5px rgba(104,104,104,0.8);
+}
+
+html{
+    
+    box-sizing: border-box;
+    margin:3px 8px;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+body{
+    background-color: #ccc;
+    color:var(--dark);
+    margin:30px 50px;
+}
+
+.wrapper ul{
+    display:grid;
+    grid-template-columns: repeat(5,1fr);
+    grid-gap: 0.5em;
+    list-style: none;
+    margin:0;
+    padding: 0;
+}
+.wrapper{
+    margin-bottom: 25px;
+}
+
+.wrapper ul li{
+    text-align: center;
+}
+.wrapper ul a{
+    display: block;
+    padding: 0.4rem 2rem;
+    text-decoration: none;
+    background-color:var(--primary);
+    color:var(--dark);
+    text-transform: uppercase;
+    box-shadow: var(--shadow);
+}
+
+.wrapper ul a:hover{
+    background-color:var(--dark);
+    color:var(--primary);
+
+}
+
+
+/* top box styling */
+.top-box{
+    display: grid;
+    grid-gap: 20px;
+    grid-template-areas:
+    'show show show show show show show top-box1'
+    'show show show show show show show top-box2' ;
+}
+
+.top-box .show h1{
+    font-size: 45px;
+    color: var(--light);
+    text-shadow: 2px 2px 2px #000;
+}
+
+.top-box .show p{
+    font-size: 2em;
+    color: var(--light);
+    text-shadow: 2px 2px 2px #000;
+}
+
+
+.top-box1{
+    grid-area:top-box1;
+    box-sizing: border-box;
+    background-color:var(--primary);
+    padding: 3px 1.2rem;
+    text-align: center;
+    box-shadow: var(--shadow);
+}
+
+
+
+.top-box2{
+    text-align: center;
+    box-sizing: border-box;
+    grid-area:top-box2 ;
+    background-color:var(--primary);
+    padding: 3px 1.2rem;
+    box-shadow: var(--shadow);
+}
+
+
+.top-box .show{
+    background-image: url('images/fpic1.jpg');
+    background-size: cover;
+    grid-area: show;
+    background-position: center;
+    max-height: 400px;
+    padding:2.5rem 3rem;
+    box-shadow: var(--shadow);
+} 
+
+.gallery{
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+    grid-gap: 20px;
+}
+.gallery img{
+    box-sizing: border-box;
+     padding: 0.5em; 
+    width: 100%;
+    box-shadow: var(--shadow);
+}
+
+
+.btn{
+    display: block;
+    padding:0.8em;
+    background-color:var(--dark);
+    color:var(--light) ;
+    z-index: 10;
+    text-decoration: none;
+    border-radius: 10px;
+    margin:10px 3px;
+}
+
+
+
+
+/* facilities we are providing */
+
+.features-box{
+    margin-top: 1.5em;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(150px,1fr));
+    grid-gap: 20px;
+}
+
+.features-box div{
+    box-sizing: border-box;
+    padding:1rem;
+    font-size: 1em;
+    text-align: center;
+    background-color:var(--primary);
+    text-align: center;
+    box-shadow: var(--shadow);
+    color:var(--dark);
+}
+
+.features-box div i{
+    font-size: 2.5em;
+}
+.show .show-btn{
+    background-color: #aeb909;;
+    padding:0.75rem 1.2rem;
+    color: var(--dark);
+    border-radius: 10px;
+    font-weight: bold;
+    box-shadow: var(--shadow);
+}
+
+.c-box img{
+    height:200px;
+    width:300px;
+    
+}
+.c-box{
+    margin:20px auto;
+    display:flex;
+    flex-wrap: wrap;
+    align-items:center;
+    padding:25px;
+    box-shadow: var(--shadow);
+    background-color: var(--primary);
+    color: var(--dark)
+}
+.c-btn{
+    align-self: flex-end;
+    
+}
+
+.foot div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 1.5em;
+    font-weight: bold;
+    height:10vh;
+    margin-top: 0.8em;;
+    background-color:var(--dark);
+    color: var(--light);
+}
+
+/* media query for viewport width 870px */
+
+@media(max-width:870px)
+{
+ .wrapper ul{
+    
+    grid-template-columns: repeat(5,1fr);
+    grid-gap: 0.8em;
+ }
+
+ .wrapper ul a{
+    
+    padding: 0.4rem 1rem;
+    
+}
+.foot div{
+    font-size: 1.3em;
+    height:8vh;
+}
+}
+
+
+
+
+/* media query for viewport width 780px  */
+@media(max-width:780px)
+{
+    .top-box .show h1{
+       font-size: 1.8em;
+    }
+    .top-box .show p{
+        font-size: 1.3em;
+    }
+    .top-box .show .show-btn{
+        margin-top: 30px;
+    }
+}
+
+
+
+/*media query for viewport width 700px   */
+@media(max-width:700px)
+{
+ .wrapper ul{
+    
+    grid-template-columns: repeat(5,0.8fr);
+    grid-gap: 0.6em;
+ }
+
+ .wrapper ul a{
+    
+    padding: 0.4rem 0.5rem;
+    font-size: 0.9em;
+}
+.foot div{
+    font-size: 1em;
+    height:6vh;
+}
+}
+
+
+/* media query for viewport width 665px  */
+@media(max-width:665px)
+{
+ 
+
+ .wrapper ul a{
+    
+    padding: 0.4rem 0.5rem;
+    font-size: 0.9em;
+}
+
+.wrapper ul{
+    
+    grid-template-columns: repeat(5,0.8fr);
+    grid-template-columns: 1fr;
+    grid-gap: 0.6em;
+ }
+
+.top-box{
+    display: grid;
+    grid-gap: 20px;
+    grid-template-areas:
+    'show show'
+    'show show' 
+    'top-box1 top-box2' ;
+}
+
+.features-box .box i{
+    font-size: 1.5em;
+}
+.foot div{
+    font-size: 0.7em;
+    height:5vh;
+}
+}
+
+/* media query for viewport width 580px  */
+@media(max-width:580px)
+{
+ 
+
+ .wrapper ul a{
+    
+    padding: 0.4rem 0.5rem;
+    font-size: 0.7em;
+}
+
+
+.top-box{
+    display: grid;
+    grid-gap: 20px;
+    grid-template-areas:
+    'show show'
+    'show show' 
+    'top-box1 top-box2' ;
+}
+}
+
+
+/* media query for viewport width 590px  */
+@media(max-width:590px)
+{
+ 
+
+    .top-box .show{
+       max-height: 260px;
+       padding:1.5rem 3rem;
+    }
+
+    .top-box .show h1{
+        font-size:1.8em ;
+    }
+      
+    .top-box .show p{
+        font-size:1.3em ;
+    }
+    body{
+        margin: 15px 35px;
+    }
+
+    .top-box .show .show-btn{
+        padding: 0.5rem;
+    }
+
+    .btn{
+        padding: 0.5rem;
+        margin: 10px;
+    }
+
+    
+    
+}
+
+/* media query for viewport width 470px  */
+@media(max-width:470px)
+{
+    .wrapper ul{
+        display:grid;
+        grid-template-columns: o.4fr;
+    
+     }
+
+     .features-box .box i{
+         font-size:1em;
+     }
+}
+
+
+
+/* media query for viewport width 470px  */
+@media(max-width:440px)
+{
+    .top-box{
+        grid-template-areas: 
+        'show '
+        'top-box1'
+        'top-box2';
+
+    }
+
+    .top-box .show h1{
+        font-size: 1.3em;
+    }
+    .top-box .show p{
+        font-size: 0.9em;
+    }
+    .top-box .show .show-btn{
+        font-size: 10px;
+    }
+} 
